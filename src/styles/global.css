@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body */
+body {
+  background-color: #f4e3c0; /* parchment */
+  color: #3e2723;            /* primary text */
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+/* Headers */
+h1, h2, h3, h4 {
+  color: #b71c1c; /* bold crimson for medieval feel */
+}
+
+/* Links */
+a {
+  color: #c62828;
+  text-decoration: underline;
+}
+
+/* Cards */
+.card {
+  background-color: #fff0d4; /* brighter parchment for contrast */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #3e2723;
+}
+
+/* Meta text */
+.meta {
+  color: #6d4c41;
+}
+
+/* Highlights / special items */
+.highlight {
+  color: #fdd835;
+}
+
+/* Buttons / accents */
+.btn-green {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.btn-blue {
+  background-color: #1565c0;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
