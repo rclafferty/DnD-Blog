@@ -6,21 +6,24 @@ import Journal from "./pages/Journal";
 import Entry from "./pages/Entry";
 import Party from "./pages/Party";
 import About from "./pages/About";
+import Header from "./components/Header";
 
 export default function App() {
-  return (
-    <Router>
-      <Navbar />
-      <main className="min-h-screen pt-20">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/journal" element={<Journal />} />
-          <Route path="/entry/:id" element={<Entry />} />
-          <Route path="/party" element={<Party />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
-  );
+    return (
+        <Router>
+            <div id="outerwrapper">
+                <div className="content-wrapper">
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/journal" element={<Journal />} />
+                        <Route path="/entry/:id" element={<Entry />} />
+                        <Route path="/party" element={<Party />} />
+                        <Route path="/about" element={<About />} />
+                    </Routes>
+                </div>
+            </div>
+            <Footer />
+        </Router>
+    );
 }

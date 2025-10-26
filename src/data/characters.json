@@ -3,18 +3,18 @@
     "name": "Eldric the Bold",
     "class": "Paladin",
     "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
-    "portrait": "/party/eldric.png"
+    "portrait": "/party/ElfDruid.jpg"
   },
   {
     "name": "Nyra the Silent",
     "class": "Rogue",
     "bio": "Speaks rarely, steals often. Once vanished for three days and returned with a cat.",
-    "portrait": "/party/nyra.png"
+    "portrait": "/party/ElfDruid.jpg"
   },
   {
     "name": "Thistle Fernroot",
     "class": "Druid",
     "bio": "Talks to trees. They don’t always answer back, but when they do—it’s drama.",
-    "portrait": "/party/thistle.png"
+    "portrait": "/party/ElfDruid.jpg"
   }
 ]
