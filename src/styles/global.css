@@ -103,3 +103,9 @@ a {
     background: none;
     color: #1565c0;
 }
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
