@@ -1,20 +1,42 @@
 [
-  {
-    "name": "Eldric the Bold",
-    "class": "Paladin",
-    "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
-    "portrait": "/party/ElfDruid.jpg"
-  },
-  {
-    "name": "Nyra the Silent",
-    "class": "Rogue",
-    "bio": "Speaks rarely, steals often. Once vanished for three days and returned with a cat.",
-    "portrait": "/party/ElfDruid.jpg"
-  },
-  {
-    "name": "Thistle Fernroot",
-    "class": "Druid",
-    "bio": "Talks to trees. They don’t always answer back, but when they do—it’s drama.",
-    "portrait": "/party/ElfDruid.jpg"
-  }
+    {
+        "category": "party",
+        "characters": [
+            {
+                "name": "Eldric the Bold",
+                "class": "Paladin",
+                "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
+                "portrait": "/party/ElfDruid.jpg"
+            },
+            {
+                "name": "Nyra the Silent",
+                "class": "Rogue",
+                "bio": "Speaks rarely, steals often. Once vanished for three days and returned with a cat.",
+                "portrait": "/party/ElfDruid.jpg"
+            },
+            {
+                "name": "Thistle Fernroot",
+                "class": "Druid",
+                "bio": "Talks to trees. They don’t always answer back, but when they do—it’s drama.",
+                "portrait": "/party/ElfDruid.jpg"
+            }
+        ]
+    }
+    ,{
+        "category": "enemies",
+        "characters": [
+            {
+                "name": "Bandits",
+                "class": "Paladin",
+                "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
+                "portrait": "/party/ElfDruid.jpg"
+            }
+        ]
+    }
+    ,{
+        "category": "npcs",
+        "characters": [
+            
+        ]
+    }
 ]

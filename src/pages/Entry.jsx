@@ -1,6 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkDirective from "remark-directive";
+import remarkGfm from "remark-gfm";
+import { visit } from "unist-util-visit";
+
+import styles from "../styles/Entry.module.css";
+
 import entries from "../data/entries.json";
 
 // Updated syntax for Vite 5+
@@ -8,6 +14,30 @@ const markdownFiles = import.meta.glob("../data/*.md", {
   query: "?raw",
   import: "default"
 });
+
+function annotationDirective() {
+  return (tree) => {
+    visit(tree, (node) => {
+      if (
+        node.type === "textDirective"// &&
+        //node.name.startsWith("annotation-")
+      ) {
+        const data = (node.data ||= {});
+        data.hName = "span";
+        data.hProperties = { className: node.name };
+      }
+
+      if (
+        node.type === "containerDirective" // &&
+        //node.name.startsWith("annotation-")
+      ) {
+        const data = (node.data ||= {});
+        data.hName = "div";
+        data.hProperties = { className: node.name };
+      }
+    });
+  };
+}
 
 export default function Entry() {
   const { id } = useParams();
@@ -29,7 +59,7 @@ export default function Entry() {
       <p className="italic text-sm mb-4">
         {entry.date} • {entry.location}
       </p>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkDirective, annotationDirective, remarkGfm]}>{content}</ReactMarkdown>
     </div>
   );
 }

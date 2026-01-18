@@ -117,3 +117,36 @@ nav {
     width: 100%;
     justify-content: space-around;
 }
+
+.annotation-red {
+  color: red;
+  font-weight: bold;
+}
+.annotation-blue {
+  background: lightblue;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+
+.stat-roll {
+    color: red;
+    font-weight: bold;
+}
+
+.player-aside {
+    background: lightgreen;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+.introduction {
+    font-style: italic;
+    margin-bottom: 1em;
+    background-color: lightgray;
+}
+
+.stage-notes {
+    background-color: lightyellow;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
