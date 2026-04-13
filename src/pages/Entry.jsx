@@ -1,18 +1,26 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkDirective from "remark-directive";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
+import fm from "front-matter";
 
-import styles from "../styles/Entry.module.css";
 
-import entries from "../data/entries.json";
-
-// Updated syntax for Vite 5+
-const markdownFiles = import.meta.glob("../data/*.md", {
+const markdownModules = import.meta.glob("../data/journal/*.md", {
   query: "?raw",
-  import: "default"
+  import: "default",
+  eager: true
+});
+
+const entries = Object.entries(markdownModules).map(([path, raw]) => {
+  const { attributes, body } = fm(raw);
+  const slug = attributes.slug ?? path.split("/").pop().replace(".md", "");
+
+  return {
+    slug,
+    frontmatter: attributes,
+    body
+  };
 });
 
 function annotationDirective() {
@@ -41,25 +49,30 @@ function annotationDirective() {
 
 export default function Entry() {
   const { id } = useParams();
-  const [content, setContent] = useState("");
-  const entry = entries.find((e) => e.id === Number(id));
 
-  useEffect(() => {
-    const path = `../data/${entry.file}`;
-    if (markdownFiles[path]) {
-      markdownFiles[path]().then(setContent);
-    } else {
-      setContent("⚠️ Entry not found.");
-    }
-  }, [entry]);
+  const entry = entries.find((e) => e.slug === id);
+
+  if (!entry) {
+    return <p>⚠️ Entry not found.</p>;
+  }
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-[rgba(255,255,245,0.9)] rounded-2xl shadow-md">
-      <h1 className="font-serif text-3xl mb-2">{entry.title}</h1>
+      <h1 className="font-serif text-3xl mb-2">
+        {entry.frontmatter.title}
+      </h1>
+
       <p className="italic text-sm mb-4">
-        {entry.date} • {entry.location}
+        {entry.frontmatter.date?.toLocaleDateString("en-US", {
+          timeZone: "UTC" // e.g., "America/New_York"
+        })} • {entry.frontmatter.location}
       </p>
-      <ReactMarkdown remarkPlugins={[remarkDirective, annotationDirective, remarkGfm]}>{content}</ReactMarkdown>
+
+      <ReactMarkdown
+        remarkPlugins={[remarkDirective, annotationDirective, remarkGfm]}
+      >
+        {entry.body}
+      </ReactMarkdown>
     </div>
   );
 }

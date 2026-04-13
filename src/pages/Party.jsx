@@ -8,7 +8,7 @@ export default function Party() {
     <section className="p-8 mt-16">
       <h1 className="text-3xl font-serif text-amber-800 mb-8 text-center">🛡️ The Party</h1>
       <div className="card-grid">
-        {characters.map((char) => (
+        {characters[0].characters.map((char) => (
           <CharacterCard key={char.name} character={char} />
         ))}
       </div>

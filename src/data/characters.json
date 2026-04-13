@@ -27,8 +27,16 @@
         "characters": [
             {
                 "name": "Bandits",
+                "race": "Bandit",
                 "class": "Paladin",
                 "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
+                "portrait": "/party/ElfDruid.jpg"
+            },
+            {
+                "name": "Changeling",
+                "race": "Changeling",
+                "class": "Mage",
+                "bio": "",
                 "portrait": "/party/ElfDruid.jpg"
             }
         ]

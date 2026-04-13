@@ -7,6 +7,7 @@ import Entry from "./pages/Entry";
 import Party from "./pages/Party";
 import About from "./pages/About";
 import Header from "./components/Header";
+import MarkdownPage from "./pages/MarkdownPage";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                         <Route path="/entry/:id" element={<Entry />} />
                         <Route path="/party" element={<Party />} />
                         <Route path="/about" element={<About />} />
+                        <Route path="/pages/:slug" element={<MarkdownPage />} />
                     </Routes>
                 </div>
             </div>

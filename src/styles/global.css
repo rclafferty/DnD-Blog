@@ -150,3 +150,40 @@ nav {
     padding: 0.5em;
     border-radius: 0.3em;
 }
+
+/***************************************
+ * TEMPORARY: Move to module CSS later *
+ ***************************************/
+.page-container,
+.rules-container,
+.journal-entry {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title,
+.rules-title,
+.journal-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.journal-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.journal-summary,
+.rules-summary {
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.page-content,
+.rules-content,
+.journal-content {
+  line-height: 1.6;
+}

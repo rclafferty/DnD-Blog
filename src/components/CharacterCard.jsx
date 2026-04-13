@@ -2,7 +2,7 @@ export default function CharacterCard({ character }) {
   return (
     <div className={`card text-center`}>
       <img
-        src={import.meta.env.BASE_URL + character.portrait}
+        src={`${import.meta.env.BASE_URL}party/ElfDruid.jpg`}
         alt={character.name}
         // className="w-32 h-32 object-cover rounded-full mx-auto mb-3 shadow-parchment"
       />

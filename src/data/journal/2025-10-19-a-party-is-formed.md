@@ -1,4 +1,10 @@
-# A Party is Formed!
+---
+title: A Party is Formed!
+date: 2025-10-26
+location: Earth
+summary: A party is formed!
+slug: a-party-is-formed
+---
 
 :::introduction
 The dungeon master starts the session with introduction scenes to introduce each individual character, establish personality, and build rapore
