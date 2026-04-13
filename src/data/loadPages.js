@@ -1,6 +1,10 @@
 import fm from "front-matter";
 
-const modules = import.meta.glob("./**/*.md", { eager: true, as: "raw" });
+const modules = import.meta.glob("./**/*.md", { 
+    eager: true,
+    query: "?raw",
+    import: "default",
+});
 
 const pages = Object.entries(modules).map(([path, content]) => {
   const { attributes, body } = fm(content);
