@@ -8,6 +8,9 @@ export default function EntryCard({ entry }) {
           timeZone: "UTC" // e.g., "America/New_York"
         })} • {entry.location}</p>
       <p className="mt-2">{entry.summary}</p>
+      <img
+        src={`${import.meta.env.BASE_URL}party/ElfDruid.jpg`}
+      />
     </Link>
   );
 }
