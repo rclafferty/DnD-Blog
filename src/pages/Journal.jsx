@@ -15,7 +15,7 @@ const markdownModules = import.meta.glob("../data/journal/*.md", {
  */
 const entries = Object.entries(markdownModules).map(([path, raw]) => {
   const { attributes, body } = fm(raw);
-  const slug = path.split("/").pop().replace(".md", "");
+  const slug = attributes.slug ?? path.split("/").pop().replace(".md", "");
 
   // Fallbacks
   const title =
