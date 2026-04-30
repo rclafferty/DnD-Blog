@@ -3,22 +3,22 @@
         "category": "party",
         "characters": [
             {
-                "name": "Eldric the Bold",
-                "class": "Paladin",
-                "bio": "Sworn to protect the innocent, but easily distracted by shiny armor.",
-                "portrait": "/party/ElfDruid.jpg"
-            },
-            {
-                "name": "Nyra the Silent",
-                "class": "Rogue",
-                "bio": "Speaks rarely, steals often. Once vanished for three days and returned with a cat.",
-                "portrait": "/party/ElfDruid.jpg"
-            },
-            {
-                "name": "Thistle Fernroot",
+                "name": "Michazane",
                 "class": "Druid",
-                "bio": "Talks to trees. They don’t always answer back, but when they do—it’s drama.",
-                "portrait": "/party/ElfDruid.jpg"
+                "bio": "An elven druid from the north, seeking allies in dangerous times.",
+                "portrait": "/party/michazane_portrait.png"
+            },
+            {
+                "name": "Thoradin",
+                "class": "Fighter",
+                "bio": "A veteran of the Last War, now sworn to protect the Councilors of Sharn. Loves chopping trees.",
+                "portrait": "/party/thoradin_portrait.png"
+            },
+            {
+                "name": "Zaelrin",
+                "class": "Rogue",
+                "bio": "Eberron's first and only contortionist poet.",
+                "portrait": "/party/zaelrin_portrait.jpg"
             }
         ]
     }
